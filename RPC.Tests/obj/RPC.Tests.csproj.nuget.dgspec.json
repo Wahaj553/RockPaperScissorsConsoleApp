@@ -1,0 +1,140 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\HandsOnCode\\RockPaperScissorsConsoleApp\\RPC.Tests\\RPC.Tests.csproj": {}
+  },
+  "projects": {
+    "D:\\HandsOnCode\\RockPaperScissorsConsoleApp\\RPC.Tests\\RPC.Tests.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\HandsOnCode\\RockPaperScissorsConsoleApp\\RPC.Tests\\RPC.Tests.csproj",
+        "projectName": "RPC.Tests",
+        "projectPath": "D:\\HandsOnCode\\RockPaperScissorsConsoleApp\\RPC.Tests\\RPC.Tests.csproj",
+        "packagesPath": "C:\\Users\\mewah\\.nuget\\packages\\",
+        "outputPath": "D:\\HandsOnCode\\RockPaperScissorsConsoleApp\\RPC.Tests\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\mewah\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "D:\\HandsOnCode\\RockPaperScissorsConsoleApp\\RPS-ConsoleApp\\RPS-ConsoleApp.csproj": {
+                "projectPath": "D:\\HandsOnCode\\RockPaperScissorsConsoleApp\\RPS-ConsoleApp\\RPS-ConsoleApp.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[16.5.0, )"
+            },
+            "coverlet.collector": {
+              "target": "Package",
+              "version": "[1.2.0, )"
+            },
+            "xunit": {
+              "target": "Package",
+              "version": "[2.4.0, )"
+            },
+            "xunit.runner.visualstudio": {
+              "target": "Package",
+              "version": "[2.4.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\HandsOnCode\\RockPaperScissorsConsoleApp\\RPS-ConsoleApp\\RPS-ConsoleApp.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\HandsOnCode\\RockPaperScissorsConsoleApp\\RPS-ConsoleApp\\RPS-ConsoleApp.csproj",
+        "projectName": "RPS-ConsoleApp",
+        "projectPath": "D:\\HandsOnCode\\RockPaperScissorsConsoleApp\\RPS-ConsoleApp\\RPS-ConsoleApp.csproj",
+        "packagesPath": "C:\\Users\\mewah\\.nuget\\packages\\",
+        "outputPath": "D:\\HandsOnCode\\RockPaperScissorsConsoleApp\\RPS-ConsoleApp\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\mewah\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "Microsoft.Extensions.Hosting": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

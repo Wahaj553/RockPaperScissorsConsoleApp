@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30503.244
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RPS-ConsoleApp", "RPS-ConsoleApp\RPS-ConsoleApp.csproj", "{5CC79516-D45E-4B63-92AD-947AABE71FD4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RPC.Tests", "RPC.Tests\RPC.Tests.csproj", "{1F70C81A-71AD-49EC-9B7F-6AE34CD7C8F3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5CC79516-D45E-4B63-92AD-947AABE71FD4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5CC79516-D45E-4B63-92AD-947AABE71FD4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5CC79516-D45E-4B63-92AD-947AABE71FD4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5CC79516-D45E-4B63-92AD-947AABE71FD4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1F70C81A-71AD-49EC-9B7F-6AE34CD7C8F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F70C81A-71AD-49EC-9B7F-6AE34CD7C8F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F70C81A-71AD-49EC-9B7F-6AE34CD7C8F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1F70C81A-71AD-49EC-9B7F-6AE34CD7C8F3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E37BF2F1-FF9F-48DD-BD58-D5B83B2761B7}
+	EndGlobalSection
+EndGlobal
