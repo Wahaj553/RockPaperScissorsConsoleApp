@@ -70,7 +70,7 @@ namespace RPS_ConsoleApp.Helper
                         }
                         else
                         {
-                            Console.Clear();
+                            Console.WriteLine("Invalid Input, Choose between ROCK, PAPER and SCISSORS: ");
                         }
                     }
                     #endregion
