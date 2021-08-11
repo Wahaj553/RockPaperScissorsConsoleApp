@@ -9,7 +9,7 @@ namespace RPC.Tests
 {
     public class UnitTest
     {
-        private readonly IHost _host = null;
+        private readonly IHost _host;
         public UnitTest()
         {
             _host = ConfigureServices.CreateHostBuilder().Build();
