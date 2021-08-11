@@ -6,7 +6,7 @@ namespace RPS_ConsoleApp
 {
    public class Program
     {
-        private static void Main(string[] args)
+        private static void Main()
         {
             var host = ConfigureServices.CreateHostBuilder().Build();
             host.Services.GetService<IMatchExecution>().StartMatchExecution("HumanPlayer");//Name of any human player
