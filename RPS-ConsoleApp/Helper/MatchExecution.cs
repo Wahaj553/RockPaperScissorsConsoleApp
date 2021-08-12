@@ -21,7 +21,7 @@ namespace RPS_ConsoleApp.Helper
             {
                 #region Best of three with two players 
                 Console.Write($"Hi {playerName},");
-                var playAgain = true;
+                
                 var player1 = new Player()
                 {
                     Name = playerName,
@@ -30,8 +30,7 @@ namespace RPS_ConsoleApp.Helper
                 {
                     Name = "ComputerPlayer",//Default Computer Player Name
                 };
-
-
+                var playAgain = true;
                 while (playAgain)
                 {
                     var scorePlayer = 0;
@@ -98,7 +97,6 @@ namespace RPS_ConsoleApp.Helper
                     }
                     #endregion
                 }
-
                 Console.ReadKey();
             }
             catch (Exception e)
