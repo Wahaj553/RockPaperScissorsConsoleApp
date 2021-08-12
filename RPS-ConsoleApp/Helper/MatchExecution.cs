@@ -20,6 +20,7 @@ namespace RPS_ConsoleApp.Helper
             try
             {
                 #region Best of three with two players 
+                Console.Write($"Hi {playerName},");
                 var playAgain = true;
                 var player1 = new Player()
                 {
@@ -70,7 +71,7 @@ namespace RPS_ConsoleApp.Helper
                         }
                         else
                         {
-                            Console.WriteLine("Invalid Input, Choose between ROCK, PAPER and SCISSORS: ");
+                            Console.WriteLine("Invalid Input...");
                         }
                     }
                     #endregion
