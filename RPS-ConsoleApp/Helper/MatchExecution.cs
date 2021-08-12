@@ -1,4 +1,7 @@
 ﻿using System;
+using System.IO;
+using System.Reflection;
+using Microsoft.Extensions.Configuration;
 using RPS_ConsoleApp.Model;
 
 namespace RPS_ConsoleApp.Helper
@@ -14,21 +17,25 @@ namespace RPS_ConsoleApp.Helper
         /// <summary>
         /// Start the flow execution for ROCK,PAPER,SCISSORS
         /// </summary>
-        /// <param name="playerName">Any Human Player</param>
-        public void StartMatchExecution(string playerName)
+        /// <param name="firstPlayerName">Any Human Player</param>
+        public void StartMatchExecution(string firstPlayerName)
         {
             try
             {
+                var configuration = ReadAppSettings();
+                var noOfGames = configuration.GetValue<int>("GameSettings:NoOfGames");
+                var secondPlayerName = configuration.GetValue<string>("GameSettings:SecondPlayerName");
+
                 #region Best of three with two players 
-                Console.Write($"Hi {playerName},");
+                Console.Write($"Hi {firstPlayerName},");
                 
                 var player1 = new Player()
                 {
-                    Name = playerName,
+                    Name = firstPlayerName,
                 };
                 var player2 = new Player()
                 {
-                    Name = "ComputerPlayer",//Default Computer Player Name
+                    Name = secondPlayerName,
                 };
                 var playAgain = true;
                 while (playAgain)
@@ -36,7 +43,7 @@ namespace RPS_ConsoleApp.Helper
                     var scorePlayer = 0;
                     var scoreCpu = 0;
                     var maxRetry = 0;
-                    while (maxRetry < 3)
+                    while (maxRetry < noOfGames)
                     {
                         Console.Write("Choose between ROCK, PAPER and SCISSORS: ");
                         var inputPlayer = Console.ReadLine()?.ToUpper();
@@ -46,7 +53,7 @@ namespace RPS_ConsoleApp.Helper
                             var randomInt = rnd.Next(1, 3);
                             player1.Action = (GameAction)Enum.Parse(typeof(GameAction),inputPlayer,true);
                             player2.Action = ((GameAction)randomInt);
-                            Console.WriteLine($"ComputerPlayer chose { player2.Action}");
+                            Console.WriteLine($"{secondPlayerName} chose { player2.Action}");
 
                             //Call the Match Battle method 
                             var winner = _matchBattle.WinningHand(player1, player2);
@@ -56,8 +63,8 @@ namespace RPS_ConsoleApp.Helper
                             }
                             else
                             {
-                                Console.WriteLine("The Winner of this battle : {0}", winner.Name);
-                                if (winner.Name == "ComputerPlayer")
+                                Console.WriteLine($"The Winner of this battle : {winner.Name}");
+                                if (winner.Name == secondPlayerName)
                                     scoreCpu++;
                                 else
                                     scorePlayer++;
@@ -65,8 +72,7 @@ namespace RPS_ConsoleApp.Helper
                                 maxRetry++;
                             }
 
-                            Console.WriteLine("\n\nSCORES:\tHumanPLAYER:\t{0}\tComputerPlayer:\t{1}", scorePlayer,
-                                scoreCpu);
+                            Console.WriteLine($"\n\nSCORES:\t{firstPlayerName}:\t{scorePlayer}\t{secondPlayerName}:\t{scoreCpu}");
                         }
                         else
                         {
@@ -77,11 +83,11 @@ namespace RPS_ConsoleApp.Helper
                     #region Winners and play again logic
                     if (scorePlayer >= 2)
                     {
-                        Console.WriteLine("HumanPlayer WON!");
+                        Console.WriteLine($"{firstPlayerName} WON!");
                     }
                     else if (scoreCpu >= 2)
                     {
-                        Console.WriteLine("ComputerPlayer WON!");
+                        Console.WriteLine($"{secondPlayerName} WON!");
                     }
 
                     Console.WriteLine("Do you want to play again?(y/n)");
@@ -104,5 +110,16 @@ namespace RPS_ConsoleApp.Helper
                 Console.WriteLine(e.Message);
             }
         }
+
+        private static IConfigurationRoot ReadAppSettings()
+        {
+            var builder = new ConfigurationBuilder()
+                .SetBasePath(Path.GetDirectoryName(Assembly.GetEntryAssembly()?.Location))
+                .AddJsonFile("appsettings.json");
+
+            var configuration = builder.Build();
+            return configuration;
+        }
+
     }
 }
