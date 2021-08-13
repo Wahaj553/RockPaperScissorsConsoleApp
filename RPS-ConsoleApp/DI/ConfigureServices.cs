@@ -1,6 +1,5 @@
 ﻿using System;
 using System.IO;
-using System.Reflection;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -42,7 +41,3 @@ namespace RPS_ConsoleApp.DI
         }
     }
 }
-
-//Add IOptions appsettings
-//try moacking
-//parametrized unit tests

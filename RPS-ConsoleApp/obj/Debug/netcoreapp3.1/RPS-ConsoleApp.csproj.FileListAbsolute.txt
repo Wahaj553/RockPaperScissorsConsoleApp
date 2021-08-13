@@ -97,4 +97,3 @@ D:\HandsOnCode\RockPaperScissorsConsoleApp\RPS-ConsoleApp\obj\Debug\netcoreapp3.
 D:\HandsOnCode\RockPaperScissorsConsoleApp\RPS-ConsoleApp\obj\Debug\netcoreapp3.1\RPS-ConsoleApp.dll
 D:\HandsOnCode\RockPaperScissorsConsoleApp\RPS-ConsoleApp\obj\Debug\netcoreapp3.1\RPS-ConsoleApp.pdb
 D:\HandsOnCode\RockPaperScissorsConsoleApp\RPS-ConsoleApp\obj\Debug\netcoreapp3.1\RPS-ConsoleApp.genruntimeconfig.cache
-D:\HandsOnCode\RockPaperScissorsConsoleApp\RPS-ConsoleApp\obj\Debug\netcoreapp3.1\RPS-ConsoleApp.csprojAssemblyReference.cache

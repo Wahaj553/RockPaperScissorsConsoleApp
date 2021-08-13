@@ -15,7 +15,6 @@ namespace RPC.Tests
             _host = ConfigureServices.CreateHostBuilder().Build();
         }
 
-
         [Theory]
         [InlineData("TestPlayer1", GameAction.Rock, "TestPlayer2", GameAction.Scissors, "TestPlayer1")] //Rock beats scissors
         [InlineData("TestPlayer1", GameAction.Scissors, "TestPlayer2", GameAction.Paper, "TestPlayer1")]// Scissors beats paper

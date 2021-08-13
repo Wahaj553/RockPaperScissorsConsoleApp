@@ -1,7 +1,4 @@
 ﻿using System;
-using System.IO;
-using System.Reflection;
-using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Options;
 using RPS_ConsoleApp.Model;
 
