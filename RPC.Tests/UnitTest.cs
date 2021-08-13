@@ -15,51 +15,32 @@ namespace RPC.Tests
             _host = ConfigureServices.CreateHostBuilder().Build();
         }
 
-        //Add parameterized test
-        [Fact]
 
-        public void GetWiningHand()
+        [Theory]
+        [InlineData("TestPlayer1", GameAction.Rock, "TestPlayer2", GameAction.Scissors, "TestPlayer1")] //Rock beats scissors
+        [InlineData("TestPlayer1", GameAction.Scissors, "TestPlayer2", GameAction.Paper, "TestPlayer1")]// Scissors beats paper
+        [InlineData("TestPlayer1", GameAction.Paper, "TestPlayer2", GameAction.Rock, "TestPlayer1")]//Paper beats rock
+        public void GetWiningHand(string firstPlayer, GameAction firstPlayerAction, string secondPlayer, GameAction secondPlayerAction, string result)
         {
             try
             {
+                //Arrange
                 var player1 = new Player()
                 {
-                    Name = "TestPlayer1",
-                    Action = GameAction.Paper
+                    Name = firstPlayer,
+                    Action = firstPlayerAction
                 };
                 var player2 = new Player()
                 {
-                    Name = "TestPlayer2",
-                    Action = GameAction.Scissors
+                    Name = secondPlayer,
+                    Action = secondPlayerAction
                 };
-                //Return the winner of the game or null in case of draw
-                var winner = _host.Services.GetService<IMatchBattle>().WinningHand(player1, player2);
-                Assert.True(true);
-            }
-            catch
-            {
-                Assert.True(false);
-            }
-        }
 
-        [Fact]
-        public void GetWiningHandWithDraw()
-        {
-            try
-            {
-                var player1 = new Player()
-                {
-                    Name = "TestPlayer1",
-                    Action = GameAction.Paper
-                };
-                var player2 = new Player()
-                {
-                    Name = "TestPlayer2",
-                    Action = GameAction.Scissors
-                };
-                //Return the winner of the game or null in case of draw
+                //Act
                 var winner = _host.Services.GetService<IMatchBattle>().WinningHand(player1, player2);
-                Assert.True(true);
+
+                //Assert 
+                Assert.True(winner.Name == result);
             }
             catch
             {

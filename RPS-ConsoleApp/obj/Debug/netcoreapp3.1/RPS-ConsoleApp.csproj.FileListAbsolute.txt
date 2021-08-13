@@ -48,6 +48,7 @@ D:\HandsOnCode\RPS-ConsoleApp\RPS-ConsoleApp\obj\Debug\netcoreapp3.1\RPS-Console
 D:\HandsOnCode\RPS-ConsoleApp\RPS-ConsoleApp\obj\Debug\netcoreapp3.1\RPS-ConsoleApp.pdb
 D:\HandsOnCode\RPS-ConsoleApp\RPS-ConsoleApp\obj\Debug\netcoreapp3.1\RPS-ConsoleApp.genruntimeconfig.cache
 D:\HandsOnCode\RockPaperScissorsConsoleApp\RPS-ConsoleApp\bin\Debug\netcoreapp3.1\RPS-ConsoleApp.exe
+D:\HandsOnCode\RockPaperScissorsConsoleApp\RPS-ConsoleApp\bin\Debug\netcoreapp3.1\appsettings.json
 D:\HandsOnCode\RockPaperScissorsConsoleApp\RPS-ConsoleApp\bin\Debug\netcoreapp3.1\RPS-ConsoleApp.deps.json
 D:\HandsOnCode\RockPaperScissorsConsoleApp\RPS-ConsoleApp\bin\Debug\netcoreapp3.1\RPS-ConsoleApp.runtimeconfig.json
 D:\HandsOnCode\RockPaperScissorsConsoleApp\RPS-ConsoleApp\bin\Debug\netcoreapp3.1\RPS-ConsoleApp.runtimeconfig.dev.json
@@ -89,7 +90,6 @@ D:\HandsOnCode\RockPaperScissorsConsoleApp\RPS-ConsoleApp\bin\Debug\netcoreapp3.
 D:\HandsOnCode\RockPaperScissorsConsoleApp\RPS-ConsoleApp\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Security.AccessControl.dll
 D:\HandsOnCode\RockPaperScissorsConsoleApp\RPS-ConsoleApp\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Security.Principal.Windows.dll
 D:\HandsOnCode\RockPaperScissorsConsoleApp\RPS-ConsoleApp\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Security.Principal.Windows.dll
-D:\HandsOnCode\RockPaperScissorsConsoleApp\RPS-ConsoleApp\obj\Debug\netcoreapp3.1\RPS-ConsoleApp.csprojAssemblyReference.cache
 D:\HandsOnCode\RockPaperScissorsConsoleApp\RPS-ConsoleApp\obj\Debug\netcoreapp3.1\RPS-ConsoleApp.AssemblyInfoInputs.cache
 D:\HandsOnCode\RockPaperScissorsConsoleApp\RPS-ConsoleApp\obj\Debug\netcoreapp3.1\RPS-ConsoleApp.AssemblyInfo.cs
 D:\HandsOnCode\RockPaperScissorsConsoleApp\RPS-ConsoleApp\obj\Debug\netcoreapp3.1\RPS-ConsoleApp.csproj.CoreCompileInputs.cache
@@ -97,4 +97,4 @@ D:\HandsOnCode\RockPaperScissorsConsoleApp\RPS-ConsoleApp\obj\Debug\netcoreapp3.
 D:\HandsOnCode\RockPaperScissorsConsoleApp\RPS-ConsoleApp\obj\Debug\netcoreapp3.1\RPS-ConsoleApp.dll
 D:\HandsOnCode\RockPaperScissorsConsoleApp\RPS-ConsoleApp\obj\Debug\netcoreapp3.1\RPS-ConsoleApp.pdb
 D:\HandsOnCode\RockPaperScissorsConsoleApp\RPS-ConsoleApp\obj\Debug\netcoreapp3.1\RPS-ConsoleApp.genruntimeconfig.cache
-D:\HandsOnCode\RockPaperScissorsConsoleApp\RPS-ConsoleApp\bin\Debug\netcoreapp3.1\appsettings.json
+D:\HandsOnCode\RockPaperScissorsConsoleApp\RPS-ConsoleApp\obj\Debug\netcoreapp3.1\RPS-ConsoleApp.csprojAssemblyReference.cache
