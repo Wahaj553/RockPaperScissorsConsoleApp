@@ -10,7 +10,6 @@ namespace RPS_ConsoleApp
         private static void Main()
         {
             var host = ConfigureServices.CreateHostBuilder().Build();
-
             Console.Write("Please enter your name: ");
             var playerName = Console.ReadLine();
             if (!string.IsNullOrEmpty(playerName))

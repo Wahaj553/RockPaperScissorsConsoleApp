@@ -2,6 +2,7 @@
 using System.IO;
 using System.Reflection;
 using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Options;
 using RPS_ConsoleApp.Model;
 
 namespace RPS_ConsoleApp.Helper
@@ -9,9 +10,11 @@ namespace RPS_ConsoleApp.Helper
     public class MatchExecution : IMatchExecution
     {
         private readonly IMatchBattle _matchBattle;
+        private readonly GameSettings _gameSettingsConfiguration;
 
-        public MatchExecution(IMatchBattle matchBattle)
+        public MatchExecution(IOptions<GameSettings> gameSettingsConfiguration, IMatchBattle matchBattle)
         {
+            _gameSettingsConfiguration = gameSettingsConfiguration.Value;
             _matchBattle = matchBattle;
         }
         /// <summary>
@@ -22,9 +25,8 @@ namespace RPS_ConsoleApp.Helper
         {
             try
             {
-                var configuration = ReadAppSettings();
-                var noOfGames = configuration.GetValue<int>("GameSettings:NoOfGames");
-                var secondPlayerName = configuration.GetValue<string>("GameSettings:SecondPlayerName");
+                var noOfGames = _gameSettingsConfiguration.NoOfGames;
+                var secondPlayerName = _gameSettingsConfiguration.SecondPlayerName;
 
                 #region Best of three with two players 
                 Console.Write($"Hi {firstPlayerName},");
@@ -110,16 +112,5 @@ namespace RPS_ConsoleApp.Helper
                 Console.WriteLine(e.Message);
             }
         }
-
-        private static IConfigurationRoot ReadAppSettings()
-        {
-            var builder = new ConfigurationBuilder()
-                .SetBasePath(Path.GetDirectoryName(Assembly.GetEntryAssembly()?.Location))
-                .AddJsonFile("appsettings.json");
-
-            var configuration = builder.Build();
-            return configuration;
-        }
-
     }
 }
