@@ -49,9 +49,9 @@ namespace RPC.Tests
 
 
         [Theory]
-        [InlineData("TestPlayer1", GameAction.Rock, "TestPlayer2", GameAction.Rock)]
-        [InlineData("TestPlayer1", GameAction.Scissors, "TestPlayer2", GameAction.Scissors)]
-        [InlineData("TestPlayer1", GameAction.Paper, "TestPlayer2", GameAction.Paper)]
+        [InlineData("TestPlayer1", GameAction.Rock, "TestPlayer2", GameAction.Rock)]// Null return with draw match
+        [InlineData("TestPlayer1", GameAction.Scissors, "TestPlayer2", GameAction.Scissors)]// Null return with draw match
+        [InlineData("TestPlayer1", GameAction.Paper, "TestPlayer2", GameAction.Paper)]// Null return with draw match
         public void GetWiningHandWithDrawMatch(string firstPlayer, GameAction firstPlayerAction, string secondPlayer, GameAction secondPlayerAction)
         {
             try
