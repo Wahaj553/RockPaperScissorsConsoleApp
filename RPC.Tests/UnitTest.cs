@@ -46,5 +46,40 @@ namespace RPC.Tests
                 Assert.True(false);
             }
         }
+
+
+        [Theory]
+        [InlineData("TestPlayer1", GameAction.Rock, "TestPlayer2", GameAction.Rock)]
+        [InlineData("TestPlayer1", GameAction.Scissors, "TestPlayer2", GameAction.Scissors)]
+        [InlineData("TestPlayer1", GameAction.Paper, "TestPlayer2", GameAction.Paper)]
+        public void GetWiningHandWithDrawMatch(string firstPlayer, GameAction firstPlayerAction, string secondPlayer, GameAction secondPlayerAction)
+        {
+            try
+            {
+                //Arrange
+                var player1 = new Player()
+                {
+                    Name = firstPlayer,
+                    Action = firstPlayerAction
+                };
+                var player2 = new Player()
+                {
+                    Name = secondPlayer,
+                    Action = secondPlayerAction
+                };
+
+                //Act
+                var winner = _host.Services.GetService<IMatchBattle>().WinningHand(player1, player2);
+
+                //Assert 
+                Assert.True(winner == null);
+            }
+            catch
+            {
+                Assert.True(false);
+            }
+        }
+
+
     }
 }
